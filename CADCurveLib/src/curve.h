@@ -4,7 +4,7 @@
 
 namespace Geometry
 {
-	struct Vec3
+	struct __declspec(dllexport) Vec3
 	{
 		double x, y, z;
 
@@ -15,14 +15,14 @@ namespace Geometry
  		}
 	};
 
-	enum class CurveType
+	enum class __declspec(dllexport) CurveType
 	{
 		Ellipse,
 		Circle,
 		Helix
 	};
 
-	class Curve
+	class __declspec(dllexport)  Curve
 	{
 	public:
 		Curve(Vec3 center);
@@ -38,6 +38,5 @@ namespace Geometry
 		Vec3 m_center;
 	};
 
-	std::ostream& operator<<(std::ostream& o, CurveType type);
-
+	__declspec(dllexport) std::ostream& operator<<(std::ostream& o, CurveType type);
 }

@@ -7,10 +7,10 @@
 #include <iostream>
 #include <omp.h>
 
-#include "src/circle.h"
-#include "src/ellipse.h"
-#include "src/helix.h"
-
+#include <curve.h>
+#include <circle.h>
+#include <ellipse.h>
+#include <helix.h>
 
 constexpr unsigned int g_numberOfCurves = 1000;
 constexpr double g_radiusMax = 500.0f;
@@ -97,7 +97,8 @@ int main(int argc, char** argv)
 	// 5.	Compute total sum of radii of all curvers in second container
 	std::cout << "Total sum of radii in second container" << std::endl;
 	double total = 0;
-#pragma omp parallel for reduction(+:total)
+
+	#pragma omp parallel for reduction(+:total)
 	for (auto& circle : circles)
 	{
 		total += circle->getRadius();

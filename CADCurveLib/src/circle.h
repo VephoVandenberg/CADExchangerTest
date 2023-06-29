@@ -4,7 +4,7 @@
 
 namespace Geometry
 {
-	class Circle : public Ellipse
+	class __declspec(dllexport) Circle : public Ellipse
 	{
 	public:
 		Circle(Vec3 center, double radius);
