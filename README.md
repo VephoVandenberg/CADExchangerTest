@@ -1,6 +1,6 @@
 # Test assignment for CAD Exchanger
 
-### This project was completed with Visual Studio 2022 on windows 10. The requirements for this tasks are have been completed, and listed next.
+### This project was completed with Visual Studio 2022 on windows 10. The requirements for this tasks have been completed, and listed next.
 ## Design a small program in C++ that would implement support of 3D curves hierarchy.
 1. Support a few types of 3D geometric curves – circles, ellipses and 3D helixes. (Simplified
 definitions are below). Each curve should be able to return a 3D point and a first derivative (3D
